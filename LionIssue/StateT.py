@@ -13,4 +13,4 @@ class StateT(State):
             print(action)
             return nextState
         else:
-            raise "Input not supported for current state"
+            raise Exception("Input not supported for current state")

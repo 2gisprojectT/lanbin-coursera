@@ -8,7 +8,7 @@ class StateMachine:
 
     def runAll(self, inputs):
         for i in inputs:
-            self.run(self, i)
+            self.run(i)
 
     #i - instance of Input(LionInput)
     def run(self, i):
