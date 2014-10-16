@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://www.coursera.org/" />
+<title>selenium_ide</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">selenium_ide</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h1.coursera-front-search-banner-tagline</td>
+	<td>Take the world's best courses, online, for free.</td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Coursera</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Courses</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.coursera-catalog-container.coursera-catalog-listings-courses-container &gt; h2</td>
+	<td>Courses</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=coursera-catalog-search-id</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=coursera-catalog-search-id</td>
+	<td>algorithm${KEY_ENTER}</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=Stanford University</td>
+	<td>Stanford University</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Stanford University</td>
+	<td>Stanford University</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
