@@ -1,4 +1,4 @@
 language: python
 python:
   - "3.4"
-script: "nosetest /LionIssue/tests"
+script: "nosetest /LionIssue/tests/lion_test/LionActionTest.py"
