@@ -16,7 +16,7 @@ class SearchBar(BaseComponent):
         self.driver.find_element_by_css_selector(self.selectors['input']).send_keys(query)
         self.driver.find_element_by_css_selector(self.selectors['submit']).submit()
 
-    def search(self, _from, _to):
+    def search_up(self, _from, _to):
         self.driver.find_element_by_css_selector(self.selectors['route_button']).click()
         self.driver.find_element_by_css_selector(self.selectors['from']).send_keys(_from)
         self.driver.find_element_by_css_selector(self.selectors['to']).send_keys(_to)

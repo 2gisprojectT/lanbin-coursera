@@ -1,3 +1,6 @@
+from selenium.webdriver.common.keys import Keys
+
+
 class Page():
     def __init__(self, driver):
 
@@ -50,4 +53,9 @@ class Page():
 
     def open(self, url):
         self.driver.get(url)
+
+    def open_new_tab(self, url):
+        body = self.driver.find_element_by_tag_name("body")
+        body.send_keys(Keys.CONTROL + 't')
+        self.open(url)
 
