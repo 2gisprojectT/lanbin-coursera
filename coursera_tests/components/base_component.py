@@ -1,3 +1,7 @@
+from selenium.common.exceptions import WebDriverException
+from selenium.webdriver.support.ui import WebDriverWait
+
+
 class BaseComponent(object):
     def __init__(self, driver, element=None):
         """
@@ -6,3 +10,4 @@ class BaseComponent(object):
         """
         self.driver = driver
         self.element = element
+

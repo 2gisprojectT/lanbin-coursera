@@ -1,8 +1,14 @@
 #-*- coding:UTF-8 -*-
+
+import sys
+import os
+
+PACKAGE_PARENT = '..'
+sys.path.append(os.path.normpath(os.path.join(PACKAGE_PARENT)))
+
 from unittest import TestCase
 import unittest
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
 from helpers.page import Page
 
 
