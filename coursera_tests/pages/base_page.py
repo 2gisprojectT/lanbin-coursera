@@ -1,5 +1,6 @@
-from selenium.common.exceptions import WebDriverException
+from selenium.common.exceptions import WebDriverException, NoSuchElementException
 from selenium.webdriver.support.wait import WebDriverWait
+import time
 
 
 class BasePage(object):
@@ -28,3 +29,12 @@ class BasePage(object):
 
     def wait_for_page_load(self):
         WebDriverWait(self.driver, 5).until(self.compare_source)
+
+    def is_element_present(self, selector):
+        #например, после нажатия кнопки, нужно обновить элементы, а не сразу брать те что есть
+        time.sleep(3)
+        try:
+            self.driver.find_element_by_css_selector(selector)
+        except NoSuchElementException:
+            return False
+        return True

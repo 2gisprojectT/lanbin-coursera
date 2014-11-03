@@ -1,5 +1,7 @@
+from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from components.base_component import BaseComponent
+from selenium.webdriver.support import expected_conditions as EC
 
 
 class SearchResult(BaseComponent):
@@ -7,16 +9,10 @@ class SearchResult(BaseComponent):
 
     selectors = {
         'self': '.coursera-catalog-container.coursera-catalog-listings-courses-container',
-        'catalog_element': '.coursera-catalog-listing-courselink.internal-home'
+        'catalog_element': '.coursera-catalog-listings .coursera-catalog-course-listing-box'
     }
 
-    def get_courses(self):
-        return self.driver.find_elements_by_css_selector(self.selectors['catalog_element'])
-
-    #поиска совпадения названия с одним из названий курсов в результатах
-    def find_course_in_result(self, name):
-        for course in self.get_courses():
-            if course.text == name:
-                return True
-        return False
+    @property
+    def catalog_item(self):
+        return self.selectors['catalog_element']
 
