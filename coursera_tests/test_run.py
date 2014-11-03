@@ -42,7 +42,7 @@ class CourseraTests(TestCase):
 
     def test_login(self):
         self.page = self.page.header.go_sign_in()
-        self.page = self.page.login_form.go_sign_in('lanbinaleksey@gmail.com', 'Debian')
+        self.page = self.page.login_form.go_sign_in('lanbinaleksey@gmail.com', '******')
         present = self.page.is_element_present(self.page.header.account_name)
         self.assertEqual(present, True)
 
